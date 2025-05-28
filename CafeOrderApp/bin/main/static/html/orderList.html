@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>주문내역 확인</title>
+	<style>
+		body {
+	      font-family: 'Nanum Gothic', sans-serif;
+	      background-color: #fff8f0;
+	      padding: 2rem;
+	      color: #3e2c1c;
+	    }
+
+	    h1 {
+	      text-align: center;
+	      color: #5c4033;
+	      margin-bottom: 2rem;
+	    }
+
+	    .review-form, .review-list {
+	      background: #fff;
+	      border-radius: 10px;
+	      padding: 1.5rem;
+	      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+	      margin-bottom: 3rem;
+	      max-width: 700px;
+	      margin-left: auto;
+	      margin-right: auto;
+	    }
+
+	    label {
+	      display: block;
+	      margin-top: 1rem;
+	      font-weight: bold;
+	    }
+
+	    input[type="text"], textarea, select {
+	      width: 100%;
+	      padding: 0.7rem;
+	      border: 1px solid #ccc;
+	      border-radius: 6px;
+	      font-size: 1rem;
+	      margin-top: 0.5rem;
+	    }
+
+	    textarea {
+	      resize: vertical;
+	    }
+
+	    button {
+	      margin-top: 1.5rem;
+	      padding: 0.9rem 1.5rem;
+	      font-size: 1rem;
+	      background-color: #5c4033;
+	      color: #fff;
+	      border: none;
+	      border-radius: 6px;
+	      cursor: pointer;
+	    }
+
+	    .review-item {
+	      border-bottom: 1px solid #eee;
+	      padding: 1rem 0;
+	    }
+
+	    .review-item:last-child {
+	      border-bottom: none;
+	    }
+
+	    .review-header {
+	      display: flex;
+	      justify-content: space-between;
+	      font-weight: bold;
+	    }
+
+	    .stars {
+	      color: #ffb400;
+	    }
+
+	    .review-date {
+	      font-size: 0.85rem;
+	      color: #999;
+	    }
+	</style>
+</head>
+<body>
+<h2>주문내역</h2>
+<table border="1">
+    <tr>
+        <th>커피</th><th>수량</th><th>포장</th><th>드라이브</th><th>시간</th>
+    </tr>
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.coffeeType}">커피</td>
+        <td th:text="${order.quantity}">수량</td>
+        <td th:text="${order.takeout ? '포장' : '매장'}">포장</td>
+        <td th:text="${order.driveThru ? '예' : '아니오'}">드라이브</td>
+        <td th:text="${order.deliveryTime}">시간</td>
+    </tr>
+</table>
+</body>
+</html>

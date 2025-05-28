@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>메뉴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Nanum Gothic', sans-serif;
+      background-color: #fff8f0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #5c4033;
+      margin-bottom: 2rem;
+    }
+	
+    .menu-section {
+      margin-bottom: 3rem;
+    }
+
+    .menu-section h2 {
+      color: #3e2c1c;
+      border-bottom: 2px solid #d9b08c;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .menu-item .info {
+      flex: 1;
+    }
+
+    .menu-item .info h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.2rem;
+      color: #5c4033;
+    }
+
+    .menu-item .info p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .menu-item .price {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #3e2c1c;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>카페 메뉴</h1>
+
+  <!-- 커피 -->
+  <section class="menu-section">
+    <h2>☕ 커피</h2>
+    <div class="menu-item">
+      <div class="info">
+        <h3>아메리카노</h3>
+        <p>진한 에스프레소에 물을 더한 기본 커피</p>
+      </div>
+      <div class="price">₩4,000</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="info">
+        <h3>카페라떼</h3>
+        <p>에스프레소 + 따뜻한 우유</p>
+      </div>
+      <div class="price">₩4,500</div>
+    </div>
+  </section>
+
+  <!-- 음료 -->
+  <section class="menu-section">
+    <h2>🍹 음료</h2>
+    <div class="menu-item">
+      <div class="info">
+        <h3>유자차</h3>
+        <p>상큼한 유자향이 가득한 따뜻한 차</p>
+      </div>
+      <div class="price">₩4,500</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="info">
+        <h3>레몬에이드</h3>
+        <p>탄산과 상큼한 레몬의 조화</p>
+      </div>
+      <div class="price">₩5,000</div>
+    </div>
+  </section>
+
+  <!-- 디저트 -->
+  <section class="menu-section">
+    <h2>🍰 디저트</h2>
+    <div class="menu-item">
+      <div class="info">
+        <h3>티라미수</h3>
+        <p>마스카포네 치즈와 에스프레소의 환상적인 조화</p>
+      </div>
+      <div class="price">₩6,000</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="info">
+        <h3>초코 브라우니</h3>
+        <p>진한 초콜릿과 쫀득한 식감</p>
+      </div>
+      <div class="price">₩5,500</div>
+    </div>
+  </section>
+
+</body>
+</html>
