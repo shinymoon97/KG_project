@@ -74,13 +74,11 @@
       <input type="time" id="time" name="time" required>
 
       <label for="seat">좌석 번호</label>
-      <select id="seat" name="seat" required>
-        <option value="">좌석 선택</option>
-        <option value="1">1번 테이블 (2인)</option>
-        <option value="2">2번 테이블 (4인)</option>
-        <option value="3">3번 테이블 (6인)</option>
-        <option value="4">4번 테이블 (개별석)</option>
-      </select>
+	  <input type="radio" id="seat" name="seat" value="1"/>1번 (2인)
+	  <input type="radio" id="seat" name="seat" value="2"/>2번 (4인)
+	  <input type="radio" id="seat" name="seat" value="3"/>3번 (6인)
+	  <input type="radio" id="seat" name="seat" value="4"/>4번 (8인)
+	  <input type="radio" id="seat" name="seat" value="5" checked/>5번 (개별석)
 
       <label for="name">예약자 이름</label>
       <input type="text" id="name" name="name" required>
