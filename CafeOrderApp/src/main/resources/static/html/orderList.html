@@ -84,7 +84,9 @@
 	</style>
 </head>
 <body>
-<h2>주문내역</h2>
+
+<a href="/html/index.html">← 뒤로가기</a>
+<h1>주문내역 확인</h1>
 <table border="1">
     <tr>
         <th>커피</th><th>수량</th><th>포장</th><th>드라이브</th><th>시간</th>
@@ -97,5 +99,6 @@
         <td th:text="${order.deliveryTime}">시간</td>
     </tr>
 </table>
+
 </body>
 </html>
