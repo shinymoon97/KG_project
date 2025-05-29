@@ -95,15 +95,13 @@
     <form>
       <label for="name">이름</label>
       <input type="text" id="name" name="name" required>
-
+	  
       <label for="rating">별점</label>
-      <select id="rating" name="rating" required>
-        <option value="5">★★★★★ (5점)</option>
-        <option value="4">★★★★☆ (4점)</option>
-        <option value="3">★★★☆☆ (3점)</option>
-        <option value="2">★★☆☆☆ (2점)</option>
-        <option value="1">★☆☆☆☆ (1점)</option>
-      </select>
+	  <input type="radio" id="rating" name="rating" value="1"/>1점 ♨
+	  <input type="radio" id="rating" name="rating" value="2"/>2점 :(
+	  <input type="radio" id="rating" name="rating" value="3" checked/>3점 :|
+	  <input type="radio" id="rating" name="rating" value="4"/>4점 :)
+	  <input type="radio" id="rating" name="rating" value="5"/>5점 ☆
 
       <label for="comment">후기 내용</label>
       <textarea id="comment" name="comment" rows="4" required></textarea>
@@ -135,6 +133,8 @@
     </div>
 
   </div>
-
+  
+  <h4>※ 여러분의 솔직한 후기가 더 나은 카페를 만듭니다.</h4>
+  
 </body>
 </html>
