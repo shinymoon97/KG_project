@@ -8,8 +8,8 @@ CREATE TABLE order_menu (
     pickup_time VARCHAR(255),
     takeout BIT,
     drive_thru BIT,
-    estimated_pickup_time VARCHAR(255)
-    PRIMARY KEY (`id`)
+    estimated_pickup_time VARCHAR(255),
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE seat_status (
