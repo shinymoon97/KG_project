@@ -1,5 +1,5 @@
-CREATE DATABASE coffeeDB;
-USE coffeeDB;
+CREATE DATABASE cafeapp;
+USE cafeapp;
 
 CREATE TABLE order (
     id BIGINT NOT NULL AUTO_INCREMENT,
