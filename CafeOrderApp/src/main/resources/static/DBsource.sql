@@ -1,7 +1,7 @@
 CREATE DATABASE cafeapp;
 USE cafeapp;
 
-CREATE TABLE order (
+CREATE TABLE order_menu (
     id BIGINT NOT NULL AUTO_INCREMENT,
     coffee_type VARCHAR(255),
     quantity INT,
