@@ -8,7 +8,7 @@ CREATE TABLE `order` (
   `estimated_pickup_time` VARCHAR(255)
   PRIMARY KEY (`id`)
 );
-
+ 
 CREATE TABLE seat_status (
   id BIGINT AUTO_INCREMENT PRIMARY KEY,
   total_seats INT NOT NULL,
