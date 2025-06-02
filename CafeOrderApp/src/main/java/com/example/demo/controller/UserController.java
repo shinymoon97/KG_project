@@ -13,6 +13,11 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/")
+    public String index() {
+        return "index"; // index.html 로 이동
+    }
+    
+    @GetMapping("/form")
     public String form() {
         return "form"; // templates/form.html 로 이동
     }
