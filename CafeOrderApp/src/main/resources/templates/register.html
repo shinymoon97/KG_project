@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+	<style>
+	    body {
+	      font-family: 'Nanum Gothic', sans-serif;
+	      background-color: #fff8f0;
+	      padding: 2rem;
+	    }
+
+	    h1 {
+	      text-align: center;
+	      color: #5c4033;
+	      margin-bottom: 2rem;
+	    }
+		
+	    .menu-section {
+	      margin-bottom: 3rem;
+	    }
+
+	    .menu-section h2 {
+	      color: #3e2c1c;
+	      border-bottom: 2px solid #d9b08c;
+	      padding-bottom: 0.5rem;
+	      margin-bottom: 1rem;
+	    }
+
+	    .menu-item {
+	      display: flex;
+	      justify-content: space-between;
+	      align-items: center;
+	      background-color: #fff;
+	      border: 1px solid #e5e5e5;
+	      padding: 1rem;
+	      margin-bottom: 0.5rem;
+	      border-radius: 8px;
+	      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+	    }
+
+	    .menu-item .info {
+	      flex: 1;
+	    }
+
+	    .menu-item .info h3 {
+	      margin: 0 0 0.2rem;
+	      font-size: 1.2rem;
+	      color: #5c4033;
+	    }
+
+	    .menu-item .info p {
+	      margin: 0;
+	      font-size: 0.9rem;
+	      color: #777;
+	    }
+
+	    .menu-item .price {
+	      font-weight: bold;
+	      font-size: 1rem;
+	      color: #3e2c1c;
+	      white-space: nowrap;
+	      margin-left: 1rem;
+	    }
+	</style>
+</head>
+<a href="/">← 뒤로가기</a>
+	<h1>회원 가입</h1>
+    <h2>사용자 정보를 입력하세요.</h2>
+<form action="register" method="post">
+  <label>아이디 : <input type="text" name="id" required></label><br>
+  <label>비밀번호 : <input type="password" name="pwd" required></label><br>
+  <label>이름 : <input type="text" name="name" required></label><br>
+  <label>이메일 : <input type="email" name="email" required></label><br>
+  <button type="submit">회원가입</button>
+</form>
