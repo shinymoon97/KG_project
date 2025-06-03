@@ -26,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/your_db", "your_user", "your_password");
+                "jdbc:mysql://localhost:3306/cafeapp", "user", "1234");
 
             String sql = "INSERT INTO users (name, pwd, email) VALUES (?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
