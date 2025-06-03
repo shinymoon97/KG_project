@@ -41,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("success.html");
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().println("회원가입 실패: " + e.getMessage());
+            response.getWriter().println("회원가입 실패 : " + e.getMessage());
         }
     }
 }
