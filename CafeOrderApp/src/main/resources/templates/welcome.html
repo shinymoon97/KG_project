@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>로그인 완료</title>
+    <title>환영합니다</title>
 	<style>
 	    body {
 	      font-family: 'Nanum Gothic', sans-serif;
@@ -65,9 +65,7 @@
 	</style>
 </head>
 <body>
-	<a href="/">← 뒤로가기</a>
-	<h1>로그인 결과</h1>
-    <h3>로그인이 성공적으로 되었습니다.</h3>
-	<a href="/">메인 화면</a>
+<a href="/">← 뒤로가기</a>
+<h2 th:text="'환영합니다, ' + ${user.name} + '님!'">환영합니다!</h2>
 </body>
 </html>
