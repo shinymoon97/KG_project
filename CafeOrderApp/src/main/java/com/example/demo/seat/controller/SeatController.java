@@ -1,34 +1,30 @@
 package com.example.demo.seat.controller;
 
-import java.util.List;
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.example.demo.seat.dto.SeatDTO;
+import com.example.demo.seat.entity.Seat;
 import com.example.demo.seat.service.SeatService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping("/seats")
+@Controller
 public class SeatController {
 
-    private final SeatService seatService;
+    @Autowired
+    private SeatService seatService;
 
-    public SeatController(SeatService seatService) {
-        this.seatService = seatService;
+    @GetMapping("/reserve")
+    public String showReservationForm() {
+        return "reserve";
     }
 
-    @GetMapping
-    public ResponseEntity<List<SeatDTO>> getAllSeats() {
-        return ResponseEntity.ok(seatService.getAllSeats());
+    @PostMapping("/reserve")
+    public String reserveSeat(@ModelAttribute Seat seat) {
+        seatService.reserveSeat(seat);
+        return "redirect:/reserve-success";
     }
 
-    @PostMapping
-    public ResponseEntity<SeatDTO> createSeat(@RequestBody SeatDTO seatDTO) {
-        return ResponseEntity.ok(seatService.createSeat(seatDTO));
+    @GetMapping("/reserve-success")
+    public String showSuccessPage() {
+        return "reserve_success";
     }
 }
